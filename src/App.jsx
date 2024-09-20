@@ -82,7 +82,8 @@ const TaskManager = () => {
       return;
     }
     if (window.confirm(`Are you sure you want to save the changes to "${newTitle}"?`)) {
-      handleTaskUpdate(task, { title: newTitle });
+      const updatedTask = { ...task, title: newTitle };
+      handleTaskUpdate(updatedTask, { title: newTitle });
       setEditingTaskId(null);
     }
   };
@@ -142,11 +143,11 @@ const TaskManager = () => {
     );
   
     if (tasksToDisplay.length === 0) {
-      return <p>No tasks found.</p>; 
+      return [];
     }
   
     const startIndex = (currentPage - 1) * tasksPerPage;
-    const endIndex = startIndex + tasksPerPage;
+    const endIndex = Math.min(startIndex + tasksPerPage, tasksToDisplay.length);
     return tasksToDisplay.slice(startIndex, endIndex);
   };
 
@@ -189,8 +190,7 @@ const TaskManager = () => {
           </button>
 
         </div>
-        
-        
+
         
       </div>
       <TutorialModal isOpen={isTutorialOpen} onClose={() => setIsTutorialOpen(false)} />
