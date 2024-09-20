@@ -1,0 +1,334 @@
+
+.task-manager {
+  max-width: 95%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff; 
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+  border-radius: 100px; 
+  color: #000000;
+  
+}
+
+.task-manager-header {
+  text-align: left;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  padding: 50px; 
+}
+
+.task-manager-header input {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.task-manager-header h1 {
+  font-family: 'helvetica', sans-serif;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.task-manager-header input {
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.task-manager ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-manager li {
+  padding: 10px;
+  border-bottom: 2px solid #99d3fa;
+  transition: background-color 0.5s ease; 
+  font-family: 'helvetica', sans-serif;
+  font-size: 1.1em;
+}
+
+.task-manager li:hover {
+  background-color: #a4d9f8; 
+  color: #000000;
+  transition: background-color 0.75s ease;
+}
+
+.task-manager li:last-child {
+  border-bottom: none;
+}
+
+.task-manager input[type="checkbox"] {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: auto;
+  accent-color: #6ffa44; 
+}
+
+.task-lists {
+  display: flex;
+  flex-direction: row;
+}
+
+.createTaskDiv{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.taskListDiv{
+  background-color: rgb(255, 255, 255);
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 95%;
+  border-radius: 100px; 
+}
+
+.taskListDiv ul {
+  padding: 20px;
+}
+
+.completed-tasks, .pending-tasks {
+  flex: 1;
+  padding: 20px;
+}
+
+.completed-tasks ul, .pending-tasks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.completed-tasks li, .pending-tasks li {
+  padding: 10px;
+  border-bottom: 2px solid #99d3fa;
+  transition: background-color 0.5s ease; 
+  font-family: 'helvetica', sans-serif;
+  font-size: 1.1em;
+}
+
+.completed-tasks li:hover, .pending-tasks li:hover {
+  background-color: #a4d9f8; 
+  color: #000000;
+  transition: background-color 0.75s ease;
+}
+
+.completed-tasks li:last-child, .pending-tasks li:last-child {
+  border-bottom: none;
+}
+
+.completed-tasks input[type="checkbox"] {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: auto;
+  accent-color: #6ffa44; 
+}
+
+.status-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.delete-icon {
+  background-color: #b93d3d; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease; 
+  
+}
+
+.deleteButton {
+  background-color: #b93d3d; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease; 
+  
+}
+
+.createButton {
+  background-color: #37ca37; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease; 
+}
+
+.edit-icon {
+  background-color: #4c90af; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease; 
+  
+}
+
+.editButton {
+  background-color: #4c90af; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease; 
+  
+}
+
+.editCancelButton {
+  background-color: #b93d3d; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease; 
+  
+}
+
+.complete-icon{
+  background-color: #37ca37; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.deleteButton:hover {
+  background-color: #b93d3d; 
+  color: #ffffff;
+}
+
+.createButton:hover {
+  background-color: #37ca37; 
+  color: #ffffff;
+}
+
+.editButton:hover {
+  background-color: #4c90af; 
+  color: #ffffff;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: #999; 
+}
+
+.task-number{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 100px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 500px;
+}
+
+.close-button {
+  background-color: #e0e0e0; 
+  color: #000000;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease; 
+}
+
+.close-button:hover {
+  background-color: #4c90af; 
+  color: #ffffff;
+}
+
+.tutorial-button {
+  background-color: #4c90af; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease; 
+}
+
+.tutorial-button:hover {
+  background-color: #4c90af; 
+  color: #ffffff;
+}
+
+.active {
+  background-color: #115794;
+  color: #fff;
+  
+}
+
+.pagination{
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.pagination h2{
+  margin-right: 10px;
+  font-family: 'helvetica', sans-serif;
+  
+}
+
+.paginationButton {
+  background-color: #4c90af; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.activePagButton{
+  background-color: #115794; 
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  
+}
